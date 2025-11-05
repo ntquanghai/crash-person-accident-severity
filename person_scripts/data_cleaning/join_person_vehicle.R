@@ -88,9 +88,6 @@ person_vehicle_joined <- person_vehicle_joined %>%
                                  TOTAL_OCCUPANTS_AVG)
   )
 
-
-
-
 # Check missingness after join
 join_na_summary <- sapply(person_vehicle_joined, function(x) sum(is.na(x)))
 join_na_summary <- sort(join_na_summary[join_na_summary > 0], decreasing = TRUE)

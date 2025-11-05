@@ -43,7 +43,7 @@ merged_data <- merged_data %>%
     VEHICLE_AGE_AVG = ifelse(is.na(VEHICLE_AGE_AVG), median_vehicle_age, VEHICLE_AGE_AVG)
   )
 
-# --- Median imputation for missing weight data ---
+# --- Imputation for missing weight data ---
 merged_data <- merged_data %>%
   mutate(
     TARE_WEIGHT_AVG = ifelse(

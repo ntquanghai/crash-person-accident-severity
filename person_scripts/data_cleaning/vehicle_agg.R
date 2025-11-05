@@ -51,6 +51,9 @@ vehicle_agg <- vehicle %>%
     LAMPS_OFF_FLAG = LAMPS == 2
   ) %>%
   group_by(ACCIDENT_NO, VEHICLE_ID) %>%
+  # Since each row has a unique pair of (ACCIDENT_NO, VEHICLE_ID), the new columns do not represent averages (_AVG)
+  # or percentages (_PCT). Instead, they represent that particular vehicle's information. These data are not aggregated.,
+  # The final report will change these info.
   summarise(
     VEHICLE_YEAR_MANUF_AVG = mean(VEHICLE_YEAR_MANUF, na.rm = TRUE),
     NO_OF_CYLINDERS_AVG = mean(NO_OF_CYLINDERS, na.rm = TRUE),
@@ -63,6 +66,7 @@ vehicle_agg <- vehicle %>%
 
     DRIVER_ACTIVE_PCT   = mean(DRIVER_INTENT_GRP %in% c("Straight_Turn", "Maneuvering"), na.rm = TRUE),
     DRIVER_PASSIVE_PCT  = mean(DRIVER_INTENT_GRP %in% c("Parking_Reversing", "Stationary"), na.rm = TRUE),
+    
     MOVE_ACTIVE_PCT     = mean(VEHICLE_MOVEMENT_GRP %in% c("Straight_Turn", "Maneuvering"), na.rm = TRUE),
     MOVE_PASSIVE_PCT    = mean(VEHICLE_MOVEMENT_GRP %in% c("Parking_Reversing", "Stationary"), na.rm = TRUE),
 

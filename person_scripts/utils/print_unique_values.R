@@ -1,6 +1,6 @@
 cat("\n=== UNIQUE VALUES AND COUNTS PER VARIABLE ===\n\n")
 
-data.set = model_data
+data.set = train_top40
 
 for (colname in names(data.set)) {
   cat("\n•", colname, "→", length(unique(data.set[[colname]])), "unique values\n")
