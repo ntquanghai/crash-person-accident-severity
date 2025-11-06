@@ -1,3 +1,5 @@
+seed = 123
+
 ==============================================================
 1.Default LGBM full features (is_unbalance = true)
 Prediction     0     1
@@ -13,6 +15,18 @@ Prediction     0     1
 Accuracy: 0.720 | Precision: 0.354 | Recall: 0.744 | F1: 0.480
 ==============================================================
 3. Tuned LGBM full features
+
+learning_rate	0.021614867
+nrounds	450
+num_leaves	184
+min_data_in_leaf	36
+feature_fraction	0.697959457
+bagging_fraction	0.864522589
+bagging_freq	6
+lambda_l2	0.901476407
+F1	0.727469055
+
+
           Reference
 Prediction     0     1
          0 48194  3616
@@ -33,6 +47,15 @@ Prediction     0     1
 Accuracy: 0.724 | Precision: 0.356 | Recall: 0.731 | F1: 0.479
 ==============================================================
 6. Tuned RF undersampled
+
+num.trees	300
+mtry	48
+min.node.size	15
+sample.fraction	0.714323127
+replace	TRUE
+max.depth	0
+F1	0.720781582
+
           Reference
 Prediction     0     1
          0 48222  3738
