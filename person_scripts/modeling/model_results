@@ -1,0 +1,40 @@
+==============================================================
+1.Default LGBM full features (is_unbalance = true)
+Prediction     0     1
+         0 48816  3729
+         1 18629 10464
+Accuracy: 0.726 | Precision: 0.360 | Recall: 0.737 | F1: 0.483
+==============================================================
+2.Undersampled LGBM full features
+          Reference
+Prediction     0     1
+         0 48198  3638
+         1 19247 10555
+Accuracy: 0.720 | Precision: 0.354 | Recall: 0.744 | F1: 0.480
+==============================================================
+3. Tuned LGBM full features
+          Reference
+Prediction     0     1
+         0 48194  3616
+         1 19251 10577
+Accuracy: 0.720 | Precision: 0.355 | Recall: 0.745 | F1: 0.481
+==============================================================
+4. Default RF full features 
+Prediction     0     1
+         0 65604 11476
+         1  1841  2717
+Accuracy: 0.837 | Precision: 0.596 | Recall: 0.191 | F1: 0.290
+==============================================================
+5. Default RF undersampled
+          Reference
+Prediction     0     1
+         0 48721  3823
+         1 18724 10370
+Accuracy: 0.724 | Precision: 0.356 | Recall: 0.731 | F1: 0.479
+==============================================================
+6. Tuned RF undersampled
+          Reference
+Prediction     0     1
+         0 48222  3738
+         1 19223 10455
+Accuracy: 0.719 | Precision: 0.352 | Recall: 0.737 | F1: 0.477
